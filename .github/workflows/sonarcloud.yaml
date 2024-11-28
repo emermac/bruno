@@ -1,0 +1,17 @@
+name: Sonar Cloud Scan
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Sonar scan
+        id: sonar
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+            args: >
+            -Dsonar.organization=emermac
+            -Dsonar.projectKey=emermac_project-1
