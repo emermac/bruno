@@ -14,4 +14,4 @@ jobs:
         with:
             args: >
             -Dsonar.organization=emermac
-            -Dsonar.projectKey=emermac_project-1
+            -Dsonar.projectKey=emermac_bruno
