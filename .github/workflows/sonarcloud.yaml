@@ -13,4 +13,5 @@ jobs:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
             args: >
-            -Dsonar.organization=emermac
+              -Dsonar.organization=emermac
+              -Dsonar.projectKey=emermac-bruno
